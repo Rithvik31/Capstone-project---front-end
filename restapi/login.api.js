@@ -1,18 +1,18 @@
 function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
   
-    axios.post("http://localhost:3000/login", {
+    axios.post('/api/login', {
       email: email,
-      password: password,
+      password: password
     })
     .then(function (response) {
       console.log(response.data);
-      // Do something with the response
+      alert('Login successful');
     })
     .catch(function (error) {
-      console.log(error);
-      // Do something with the error
+      console.log(error.response.data);
+      alert('Login failed');
     });
   }
   
