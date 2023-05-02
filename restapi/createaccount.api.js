@@ -1,23 +1,21 @@
-const signupForm = document.getElementById("signup-form");
+const form = document.getElementById('signup-form');
 
-signupForm.addEventListener("submit", (e) => {
+form.addEventListener('submit', e => {
 	e.preventDefault();
 
-	const name = document.getElementById("name").value;
-	const email = document.getElementById("email").value;
-	const password = document.getElementById("password").value;
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	const password = document.getElementById('password').value;
 
-	axios.post("http://your-backend-url.com/signup", {
+	axios.post('http://example.com/signup', {
 		name: name,
 		email: email,
 		password: password
 	})
 	.then(response => {
-		// Handle successful response here
-		console.log(response.data);
+		console.log(response);
 	})
 	.catch(error => {
-		// Handle error response here
 		console.log(error);
 	});
 });
