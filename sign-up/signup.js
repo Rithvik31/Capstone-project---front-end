@@ -15,7 +15,7 @@ function createUser(event) {
     })
     .catch(error => {
       console.error(error);
-      alert('Error creating user.');
+      alert('Error creating User.');
     });
 }
 
