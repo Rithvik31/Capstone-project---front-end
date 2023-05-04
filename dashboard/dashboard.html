@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Income</a></li>
+      <li><a href="#">Expenses</a></li>
+      <li><a href="#">View Transactions</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h2>Income vs Expenses</h2>
+      <canvas id="myChart"></canvas>
+      <div class="options">
+        <div class="option">
+          <h3>Total Income</h3>
+          <p id="total-income">$0.00</p>
+        </div>
+        <div class="option">
+          <h3>Total Expense</h3>
+          <p id="total-expense">$0.00</p>
+        </div>
+        <div class="option">
+          <h3>Total Balance</h3>
+          <p id="total-balance">$0.00</p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h2>Recent Activity</h2>
+      <canvas id="myPieChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
