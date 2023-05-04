@@ -35,11 +35,11 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #192219;
   }
   
   #error-message {
-    color: red;
+    color: rgb(30, 15, 57);
     font-size: 14px;
     text-align: center;
     margin-top: 20px;

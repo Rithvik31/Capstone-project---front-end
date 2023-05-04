@@ -14,20 +14,20 @@ body {
   }
   
   input {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 5px;
   }
   
   button {
     padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(184, 80, 29);
+    color: rgb(20, 3, 3);
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #3e8e41;
+    background-color: #87b889;
   }
   
