@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Finance App</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-iW8qizpNl6y5UvRjK6W8U0pKj/RcakjkvRkb9cdch1MjK1nkG+scOoOa3wYq3SxPf0jAnZTz0AXJG2QJe4uBmw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="container">
         <h1>Finance App</h1>
         <form id="finance-form">
-            <label for="userId">User ID:</label>
-            <input type="number" id="userId" name="userId" required><br><br>
-            <label for="financeType">Finance Type:</label>
-            <select id="financeType" name="financeType" required>
-                <option value="">Select</option>
-                <option value="INCOME">Income</option>
-                <option value="EXPENSES">Expenses</option>
-            </select><br><br>
-            <label for="tag">Tag:</label>
-            <select id="tag" name="tag" required>
-                <option value="">Select Category</option>
-                <!-- Categories for Income -->
-                <option value="Salary" class="income-option">Salary</option>
-                <option value="Investments" class="income-option">Investments</option>
-                <option value="Bonus" class="income-option">Bonus</option>
-                <!-- Categories for Expenses -->
-                <option value="Food" class="expenses-option">Food</option>
-                <option value="Rent" class="expenses-option">Rent</option>
-                <option value="Utilities" class="expenses-option">Utilities</option>
-            </select><br><br>
-            <label for="invDt">Investment Date:</label>
-            <input type="date" id="invDt" name="invDt" required><br><br>
-            <label for="amt">Amount:</label>
-            <input type="number" id="amt" name="amt" required><br><br>
-            <button type="submit" id="submit-btn">Add Finance Info</button>
+            <div class="mb-3">
+                <label for="userId" class="form-label">User ID:</label>
+                <input type="number" id="userId" name="userId" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="financeType" class="form-label">Finance Type:</label>
+                <select id="financeType" name="financeType" class="form-select" required>
+                    <option value="">Select</option>
+                    <option value="INCOME">Income</option>
+                    <option value="EXPENSES">Expenses</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="tag" class="form-label">Tag:</label>
+                <select id="tag" name="tag" class="form-select" required>
+                    <option value="">Select Category</option>
+                    <!-- Categories for Income -->
+                    <option value="Salary" class="income-option">Salary</option>
+                    <option value="Investments" class="income-option">Investments</option>
+                    <option value="Bonus" class="income-option">Bonus</option>
+                    <!-- Categories for Expenses -->
+                    <option value="Food" class="expenses-option">Food</option>
+                    <option value="Rent" class="expenses-option">Rent</option>
+                    <option value="Utilities" class="expenses-option">Utilities</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="invDt" class="form-label">Investment Date:</label>
+                <input type="date" id="invDt" name="invDt" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="amt" class="form-label">Amount:</label>
+                <input type="number" id="amt" name="amt" class="form-control" required>
+            </div>
+            <button type="submit" id="submit-btn" class="btn btn-primary">Add Finance Info</button>
         </form>
         <div id="result"></div>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap JS -->
     <script src="script.js"></script>
 </body>
 
