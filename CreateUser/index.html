@@ -8,23 +8,28 @@
 </head>
 
 <body>
-  <h1>Create User</h1>
-  <form id="user-form">
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" minlength="8" required>
-      <span id="password-error" class="error-message"></span>
-      <button type="submit" id="signup-btn" disabled>Sign Up</button>
-    </div>
-  </form>
+  <h1>Allied Personel Finance Tracker</h1>
+  <div class="form-container">
+    <h2>Create User</h2>
+    <form id="user-form">
+      <p>If already a user <a href="D:\Capstone Project\Capstone-Project-Frontend\login\index.html"> Click here</a></p>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <span id="password-error" class="error-message"></span>
+        <button type="submit" id="signup-btn" disabled>Sign Up</button>
+      </div>
+    </form>
+    <img src="D:\Capstone Project\kumbh-kalash.png" alt="Logo" id="image">
+  </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
