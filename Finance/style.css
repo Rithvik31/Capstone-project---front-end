@@ -1,0 +1,31 @@
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 50px;
+}
+
+form {
+	margin-top: 30px;
+	text-align: left;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	text-align: left;
+}
+
+input, select {
+	width: 250px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#result {
+	margin-top: 30px;
+	font-weight: bold;
+}
