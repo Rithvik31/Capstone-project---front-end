@@ -6,15 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
     <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Income</a></li>
-      <li><a href="#">Expenses</a></li>
-      <li><a href="#">View Transactions</a></li>
+      <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\dashboard/index.html">Dashboard</a></p>
+      <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Finance/index.html">Income and expenses</a></p>
       <li><a href="#">Profile</a></li>
       <li><a href="#">About Us</a></li>
-      <li><a href="#">Logout</a></li>
+      <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Login/index.html">Logout</a></p>
     </ul>
   </div>
 
@@ -37,13 +34,27 @@
         </div>
       </div>
     </div>
-    <div class="right">
-      <h2>Recent Activity</h2>
+    <body>
+      <h1>Finances</h1>
+      <table id="finances">
+        <thead>
+      </thead>
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>Finance Type</th>
+            <th>Tag</th>
+            <th>Invoice Date</th>
+            <th>Amount</th>
+          </tr>
+        </tbody>
+      </table>
       <canvas id="myPieChart"></canvas>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

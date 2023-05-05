@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
     
     if (response.status === 200) {
       loginStatus.innerHTML = 'Login successful';
-      window.location.href = '/dashboard.html';
+      window.location.href = '/monefydashboard/dashboard.html';
     }
   } catch (error) {
     loginStatus.innerHTML = 'Login failed';
