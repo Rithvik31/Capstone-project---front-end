@@ -3,14 +3,14 @@ const result = document.querySelector('#result');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const userId = document.querySelector('#userId').value;
+    //const userId = document.querySelector(1).value;
     const financeType = document.querySelector('#financeType').value;
     const tag = document.querySelector('#tag').value;
     const invDt = document.querySelector('#invDt').value;
     const amt = document.querySelector('#amt').value;
 
     axios.post('http://localhost:8080/finance/user', {
-        userId: userId,
+        userId: 1,
         financeType: financeType,
         tag: tag,
         invDt: invDt,
@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
 
 function submitForm(event) {
     event.preventDefault();
-    const userId = document.getElementById('userId').value;
+    const userId = document.getElementById(1).value;
     const financeType = document.getElementById('financeType').value;
     const tag = document.getElementById('tag').value;
     const invDt = document.getElementById('invDt').value;
