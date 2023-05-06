@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
     
     if (response.status === 200) {
       loginStatus.innerHTML = 'Login successful';
-      window.location.href = '/monefydashboard/dashboard.html';
+      window.location.href = 'file:///C:/Users/Rithvik/OneDrive/Desktop/Capstone-project---front-end/monefydashboard/index.html';
     }
   } catch (error) {
     loginStatus.innerHTML = 'Login failed';

@@ -10,9 +10,6 @@ axios.get('http://localhost:8080/finance/user-finances')
       financeRow.insertCell().textContent = finance.tag;
       financeRow.insertCell().textContent = finance.invDt;
       financeRow.insertCell().textContent = finance.amt;
-      // financeRow.insertCell().textContent = finance.userDto.id;
-      // financeRow.insertCell().textContent = finance.userDto.name;
-      // financeRow.insertCell().textContent = finance.userDto.email;
     }
   })
   .catch(error => console.error(error));
