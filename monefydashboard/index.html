@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">MONEFY</a>
-	  </nav>
-    <div class="navbar">
-        <ul>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\monefydashboard/index.html">Dashboard</a></p>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Finance/index.html">Income and expenses</a></p>
-          <p><a href="#">Profile</a></li>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\AboutUs/index.html">About Us</a></p>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Login/index.html">Logout</a></p>
-        </ul>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./admin-dash.html">MONEFY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Dashboard</a>
+            </li>
+            <li class="nav-item ms-10">
+              <a class="nav-link" href="../Finance/index.html" id="events">Income and expenses</a>
+            </li>
+            <li class="nav-item ms-10">
+              <a class="nav-link" href="../profile/profile.html">Profile</a>
+            </li>
+            <li class="nav-item ms-10">
+              <a class="nav-link" href="../AboutUs/index.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Login/index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
 
-  <div class="container">
-    <div class="left">
-      <h2>Income vs Expenses</h2>
-      <canvas id="myChart"></canvas>
+    <div class="container">
+      <div class="left">
+        <h2>Income vs Expenses</h2>
+        <canvas id="myChart"></canvas>
       </div>
     </div>
-    <body>
+
+    <div>
       <h1>Recent transactions</h1>
       <table id="finances">
         <thead>
-      </thead>
-        <tbody>
           <tr>
             <th>Finance Type</th>
             <th>Tag</th>
             <th>Invoice Date</th>
             <th>Amount</th>
           </tr>
+        </thead>
+        <tbody>
         </tbody>
       </table>
       <canvas id="myPieChart"></canvas>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>

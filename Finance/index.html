@@ -6,21 +6,34 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<nav class="navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">MONEFY</a>
-	  </nav>
-	  <div class="container mt-5">
-		<div class="card">
-		  <div class="card-header">
-    <div class="navbar">
-        <ul>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\monefydashboard/index.html">Dashboard</a></p>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Finance/index.html">Income and expenses</a></p>
-          <p><a href="#">Profile</a></p>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\AboutUs/index.html">About Us</a></p>
-          <p><a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Login/index.html">Logout</a></p>
-        </ul>
-      </div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="./admin-dash.html">MONEFY</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\monefydashboard/index.html">Dashboard</a>
+			  </li>
+			  <li class="nav-item ms-10">
+				<a class="nav-link" href="../Finance/index.html" id="events">Income and expenses</a>
+			  </li>
+			  <li class="nav-item ms-10">
+				<a class="nav-link" href="../profile/profile.html">Profile</a>
+			  </li>
+			  <li class="nav-item ms-10">
+				<a class="nav-link" href="../AboutUs/index.html">About Us</a>
+			  </li>
+			  <li class="nav-item ms-10">
+				<a class="nav-link" href="../Login/index.html">Logout</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
 	<div class="container">
 		<h2>Income and finances</h2>
 		<form id="finance-form">
@@ -52,5 +65,7 @@
 	</div>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="script.js"></script>
+	</nav>
 </body>
 </html>
+		
