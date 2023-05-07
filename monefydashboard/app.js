@@ -47,7 +47,7 @@ axios.all([
       labels: ['Income', 'Expenses'],
       datasets: [{
         data: [income, expenses],
-        backgroundColor: ['#36A2EB', '#FF6384'],
+        backgroundColor: ['#36A2ED', '#FF6384'],
         borderWidth: 0
       }]
     },

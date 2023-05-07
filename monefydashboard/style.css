@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
-	background-color: #faeaea;
+	background-color: #413b3b;
   }
   
   .chart-container {
@@ -25,13 +25,13 @@ body {
 	top: 0;
 	left: 0;
 	overflow-x: hidden;
-	color: white;
+	color: rgb(34, 32, 32);
 	padding-top: 20px;
   }
   
   .sidebar a {
 	display: block;
-	color: white;
+	color: rgb(34, 32, 32);
 	padding: 16px;
 	text-decoration: none;
   }
@@ -57,7 +57,7 @@ body {
   .chart {
 	width: 45%;
 	height: 400px;
-	background-color: white;
+	background-color: rgb(33, 31, 31);
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
@@ -88,7 +88,10 @@ body {
   }
   
   .navigation a:hover {
-	background-color: #ddd;
+	background-color: #1f1e1e;
 	color: black;
+  }
+  body {
+	background-color: #f2f2f2;
   }
   
