@@ -1,11 +1,22 @@
 const financesTable = document.getElementById('finances').getElementsByTagName('tbody')[0];
+const rows = financesTable.rows;
+for (let i = 1; i < rows.length; i++) { // skip the header row
+  const financeType = rows[i].cells[1].textContent.trim();
 
+  if (Type === "INCOME") {
+    rows[i].style.color = "red";
+  } else {
+    rows[i].style.color = "black";
+    }
+  }
+var i=1;
 axios.get('http://localhost:8080/finance/user-finances')
   .then(response => {
     const data = response.data;
+    data.bd.sort((a, b) => new Date(a.invDt) - new Date(b.invDt)); // sort by invDt
     for (let finance of data.bd) {
       const financeRow = financesTable.insertRow();
-      //financeRow.insertCell().textContent = finance.id;
+      financeRow.insertCell().textContent = i++;
       financeRow.insertCell().textContent = finance.financeType;
       financeRow.insertCell().textContent = finance.tag;
       financeRow.insertCell().textContent = finance.invDt;
