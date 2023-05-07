@@ -6,6 +6,11 @@ body {
 	background-color: #faeaea;
   }
   
+  .chart-container {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+  }
   .container {
 	display: flex;
 	flex-direction: row;
