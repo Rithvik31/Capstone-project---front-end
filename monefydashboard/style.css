@@ -75,7 +75,7 @@ body {
 	background-color: #222;
   }
   .table-container {
-	height: 300px; /* set the desired height */
+	height: 400px; /* set the desired height */
 	overflow-y: scroll;
   }
   
@@ -92,5 +92,12 @@ body {
   }
   body {
 	background-color: #f2f2f2;
+  }
+  .income {
+	color: green;
+  }
+  
+  .expense {
+	color: red;
   }
   

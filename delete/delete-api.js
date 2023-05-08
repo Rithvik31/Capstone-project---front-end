@@ -25,7 +25,7 @@ function propulateActualData(table, invoices) {
         row.insertCell(3).innerHTML = invDt
         row.insertCell(4).innerHTML = amt
         row.insertCell(5).innerHTML = `
-            <a class='ms-2' onclick='showConfirmDeleteModal(${id})'>Delete</a>`
+        <a class='ms-2' onclick='showConfirmDeleteModal(${id})'>Delete</a>`
     }
 }
 

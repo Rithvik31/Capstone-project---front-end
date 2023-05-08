@@ -9,11 +9,11 @@ for (let i = 1; i < rows.length; i++) { // skip the header row
     rows[i].style.color = "black";
     }
   }
-var i=1;
+var i = 1;
 axios.get('http://localhost:8080/finance/user-finances')
   .then(response => {
     const data = response.data;
-    data.bd.sort((a, b) => new Date(a.invDt) - new Date(b.invDt)); // sort by invDt
+    data.bd.sort((a, b) => new Date(b.invDt) - new Date(a.invDt)); // sort by invDt
     for (let finance of data.bd) {
       const financeRow = financesTable.insertRow();
       financeRow.insertCell().textContent = i++;
@@ -21,9 +21,17 @@ axios.get('http://localhost:8080/finance/user-finances')
       financeRow.insertCell().textContent = finance.tag;
       financeRow.insertCell().textContent = finance.invDt;
       financeRow.insertCell().textContent = finance.amt;
+      
+      // set row color based on finance type
+      if (finance.financeType === "income") {
+        financeRow.style.color = "green";
+      } else if (finance.financeType === "expense") {
+        financeRow.style.color = "red";
+      }
     }
   })
   .catch(error => console.error(error));
+
 
   const incomeEndpoint = 'http://localhost:8080/finance/total-income';
 const expensesEndpoint = 'http://localhost:8080/finance/total-expenses';
