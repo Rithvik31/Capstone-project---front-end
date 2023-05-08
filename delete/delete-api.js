@@ -1,13 +1,6 @@
 function setupTable() {
     const table = document.getElementById('tableInvoice')
 
-    const btnSearch = document.getElementById('btnSearch')
-    
-    btnSearch.onclick = () =>   {
-
-        apiFetchAllCustomerInvoices(table, document.getElementById('txtClient').value )
-    }
-
     apiFetchAllInvoices(table)
     // populateStaticData(table)
 }

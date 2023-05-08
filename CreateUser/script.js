@@ -39,8 +39,14 @@ function createUser(event) {
   axios.post('http://localhost:8080/users/register', user)
     .then(response => {
       console.log(response.data);
+      if(response.data == 'SUCCESS'){
       alert('User created successfully!');
       form.reset();
+    }
+    else{
+      alert('USER ALREADY EXIST');
+      form.reset();
+    }
     })
     .catch(error => {
       console.error(error);
