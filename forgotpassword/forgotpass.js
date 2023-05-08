@@ -1,4 +1,3 @@
-
 const forgotPasswordForm = document.getElementById("forgot-password-form");
 
 forgotPasswordForm.addEventListener("submit", function (event) {
@@ -16,9 +15,6 @@ forgotPasswordForm.addEventListener("submit", function (event) {
         .catch((error) => {
             console.error(error);
         });
-    // const message = "Password reset link has been sent to your email!";
-    // alert(message);
-    // window.location.href = "../loginpage/login.html";
 });
 
 const validateForm = ({ email }) => {
