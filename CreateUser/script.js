@@ -12,7 +12,7 @@ function createUser(event) {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // Basic client-side form validation
+
   if (name === '') {
     showError(nameInput, 'Name is required');
     return;
