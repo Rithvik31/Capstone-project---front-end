@@ -13,7 +13,7 @@ var i = 1;
 axios.get('http://localhost:8080/finance/user-finances')
   .then(response => {
     const data = response.data;
-    data.bd.sort((a, b) => new Date(b.invDt) - new Date(a.invDt)); // sort by invDt
+    data.bd.sort((a, b) => new Date(b.invDt) - new Date(a.invDt));
     for (let finance of data.bd) {
       const financeRow = financesTable.insertRow();
       financeRow.insertCell().textContent = i++;

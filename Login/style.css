@@ -1,3 +1,25 @@
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #28a745;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 body {
   font-family: Arial, sans-serif;
 }

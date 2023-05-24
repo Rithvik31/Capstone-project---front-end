@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="style.css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light btn-primary bg-primary sticky-top">
+    <div class="container-fluid">  
+      <a class="navbar-brand bg-body-tertiary" href="D:\Capstone Project\Capstone-Project-Frontend\Dashboard\index.html"><img src="D:\Capstone Project\logo.png" alt="Logo" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a type="button" class="nav-link active " aria-current="page" href="#">Dashboard</a>
+
+          <a class="nav-link" href="file:///D:/Capstone%20Project/Capstone-Project-Frontend/AboutUs/index.html">About Us</a>
+          <a class="nav-link" href="file:///D:/Capstone%20Project/Capstone-Project-Frontend/login/index.html">log Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div>
+	<!-- The Modal -->
+
+  <span class="container">
+	<div class="modal modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Enter Finance</h4>
+					<button type="button" class="close" data-dismiss="modal">&#9876;</button>
+				</div>
+
+				<!-- Modal body -->
+        <div class="modal-body">
+          <div class="container">
+            <h1>Finance App</h1>
+            <form id="finance-form" class="form-label form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="financeType">Finance Type:</label>
+                  <select id="financeType" name="financeType" required>
+                    <option value="">Select</option>
+                    <option value="INCOME">Income</option>
+                    <option value="EXPENSES">Expenses</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="tag">Tag:</label>
+                  <select id="tag" name="tag" required>
+                    <option value="">Select Category</option>
+                    <option value="Salary" class="income-option">Salary</option>
+                    <option value="Investments" class="income-option">Investments</option>
+                    <option value="Bonus" class="income-option">Bonus</option>
+                    <option value="Food" class="expenses-option">Food</option>
+                    <option value="Rent" class="expenses-option">Rent</option>
+                    <option value="Utilities" class="expenses-option">Utilities</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="invDt">Date:</label>
+                  <input type="date" id="invDt" name="invDt" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="amt">Amount:</label>
+                  <input type="number" id="amt" name="amt" min="0" required>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary" type="submit" id="submit-btn">Add Finance Info</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+            </form>
+						<div id="result"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-14">
+        <section class="grid">
+			<h1>Finances</h1>
+          
+
+            <button type="button" class="btn btn-info btn-sm exampleModalLabel" data-toggle="modal" data-target="#myModal" >
+              Enter Finance
+            </button>
+
+            <button id="exportButton" class="btn btn-info btn-sm exampleModalLabel">
+            <a href="javascript:demoFromHTML()" class="button">Download Pdf</a></button>
+            <div id="content">
+                <!-- <p> -->
+
+            <div class="row mt-3">
+            <table class="table table-bordered table-container" id="tableInvoice">
+              <thead>
+                <tr>
+                  <th> Sr no,</th>
+                  <th >Finance Type</th>
+                  <th>Tag</th>
+                  <th>Date</th>
+                  <th>Amount(₹)</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>      
+          </div>
+                <!-- </p> -->
+        </div>
+      <!-- Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm </h5>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+              <div class="modal-body">
+                Do You Really Want To Delete ?
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-danger" id="btDl">Delete It</button>
+              </div>
+            </div>
+          </div>
+        </div>
+			</table>
+        </section>
+      </div>
+      <div class="col-sm-6">
+        <section class="grid">
+			<h2>Income vs Expenses</h2>
+			<div class="chart-container">
+				<canvas id="pie-chart"></canvas>
+			</div>       
+		</section>
+      </div>
+    </div>
+
+
+    
+
+  </span>
+
+	</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="donut.js"></script>
+  <script src="script.js"></script>
+  <script src="financeEntry.js"></script>
+  <script>
+    function demoFromHTML() {
+        var pdf = new jsPDF('p', 'pt', 'a3');
+        // source can be HTML-formatted string, or a reference
+        // to an actual DOM element from which the text will be scraped.
+        source = document.getElementById('content');
+
+        var table = source.querySelector('#tableInvoice');
+        var actionColumn = table.querySelector('th:nth-child(6), td:nth-child(6)');
+        var actionColumnIndex = Array.prototype.indexOf.call(table.rows[0].cells, actionColumn);
+        for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].deleteCell(actionColumnIndex);
+  }
+        location.reload();
+
+        // we support special element handlers. Register them with jQuery-style 
+        // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+        // There is no support for any other type of selectors 
+        // (class or compound) at this time.
+        specialElementHandlers = {
+            // element with id of "bypass" - jQuery-style selector
+            '#bypassme': function (element, renderer) {
+                // true = "handled elsewhere, bypass text extraction"
+                return true;
+            }
+        };
+        margins = {
+            top: 100,
+            bottom: 80,
+            left: 70,
+            width: 622
+        };
+        // all coords and widths are in jsPDF instance's declared units
+        // 'inches' in this case
+        pdf.fromHTML(
+            source, // HTML string or DOM elem ref.
+            margins.left, // x coord
+            margins.top, { // y coord
+                'width': margins.width, // max width of content on PDF
+                'elementHandlers': specialElementHandlers,
+                'font_size':10,
+            },
+
+            function (dispose) {
+                // dispose: object with X, Y of the last line add to the PDF 
+                //          this allows the insertion of new lines after html
+                pdf.save('Test.pdf');
+            }, margins
+        );
+    }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,4 +1,81 @@
-.table-bordered{
-    position:absolute;
-    margin-left: 5px;
-}
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #28a745;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+  }
+  
+  /* Table Styles */
+  .table {
+    margin-top: 20px;
+  }
+  
+  .table th {
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .table td {
+    background-color: #fff;
+  }
+  
+  /* Modal Styles */
+  .modal-header {
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    font-weight: bold;
+  }
+  
+  .modal-footer {
+    border-top: none;
+  }
+  
+  /* Button Styles */
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-close {
+    color: #fff;
+  }
+  
+  /* Footer Styles */
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+  }
+  

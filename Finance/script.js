@@ -55,15 +55,21 @@ function submitForm(event) {
 const expensesCategories = ['Food', 'Rent', 'Utilities', 'Transportation', 'Entertainment'];
 const incomeCategories = ['Salary', 'Bonus', 'Gift', 'Investment', 'Other'];
 
-function populateCategories() {
-    const financeType = document.getElementById('financeType').value;
-    const categories = financeType === 'EXPENSES' ? expensesCategories : incomeCategories;
-    const categorySelect = document.getElementById('tag');
-    categorySelect.innerHTML = '';
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.text = category;
-        option.value = category;
-        categorySelect.add(option);
-    });
-}
+financeTypeSelect.addEventListener('change', () => {
+    if (financeTypeSelect.value === 'INCOME') {
+      tagSelect.innerHTML = `
+        <option value="">Select Category</option>
+        <option value="Salary" class="income-option">Salary</option>
+        <option value="Investments" class="income-option">Investments</option>
+        <option value="Bonus" class="income-option">Bonus</option>
+      `;
+    } else if (financeTypeSelect.value === 'EXPENSES') {
+      tagSelect.innerHTML = `
+        <option value="">Select Category</option>
+        <option value="Food" class="expenses-option">Food</option>
+        <option value="Rent" class="expenses-option">Rent</option>
+        <option value="Utilities" class="expenses-option">Utilities</option>
+      `;
+    }
+  });
+  

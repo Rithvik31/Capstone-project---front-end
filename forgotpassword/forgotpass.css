@@ -1,14 +1,79 @@
-#forgot-password-form {
-    margin-top: 100px;
-    padding: 100px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px 0px rgba(191, 33, 33, 0.2);
-}
-
-#forgot-password-form label {
-    font-weight: bold;
-}
-
-#forgot-password-form button[type="submit"] {
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
     margin-top: 20px;
-}
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #28a745;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Form Styles */
+  form {
+    text-align: left;
+    margin-top: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  #submit-btn {
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #28a745;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Styles */
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+  }
+  
