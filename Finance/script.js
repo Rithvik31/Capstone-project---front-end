@@ -70,6 +70,20 @@ financeTypeSelect.addEventListener('change', () => {
         <option value="Rent" class="expenses-option">Rent</option>
         <option value="Utilities" class="expenses-option">Utilities</option>
       `;
+    }else if (financeTypeSelect.value === 'INVESTMENT') {
+      tagSelect.innerHTML = `
+        <option value="">Select Category</option>
+        <option value="Stocks" class="investment-option">Stocks</option>
+        <option value="Bonds" class="investment-option">Bonds</option>
+        <option value="Real Estate" class="investment-option">Real Estate</option>
+        <option value="Other" class="investment-option">Other</option>
+      `;
+      
+      const otherOption = document.createElement('option');
+      otherOption.value = 'Other';
+      otherOption.classList.add('investment-option');
+      otherOption.text = 'Enter by User';
+      tagSelect.appendChild(otherOption);
     }
   });
   

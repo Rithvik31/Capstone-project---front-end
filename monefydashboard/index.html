@@ -42,8 +42,11 @@
       </div>
     </div>
   </nav>
-    <div class="col-md-5">
+    <div class="container">
       <section class="navbar-dark">
+        <div class="row">
+          <div class="col-sm-14">
+            <section class="grid">
         <h1>Recent Transcations</h1>
         <button id="exportButton" class="btn btn-info btn-sm exampleModalLabel">
           <a href="javascript:demoFromHTML()" class="button">Download Pdf</a></button>
@@ -61,12 +64,35 @@
                 <th class="text-white">Invoice Date</th>
                 <th class="text-white">Amount (₹)</th>
               </tr>
-            </tbody>  
+            </tbody> 
           </table>
         </div>
       </section>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-14">
+        <section class="grid">
+      <h1>Finances</h1>
+
+            <div class="row mt-3">
+            <table class="table table-bordered table-container" id="tableInvestment">
+              <thead>
+                <tr>
+                  <th> Sr no.</th>
+                  <th >Finance Type</th>
+                  <th>Tag</th>
+                  <th>Date</th>
+                  <th>Amount(₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>      
+          </div>
+        </div>
   
   <div class="col-sm-6">
     <section class="grid">
@@ -80,6 +106,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
+  <script src="investment.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
