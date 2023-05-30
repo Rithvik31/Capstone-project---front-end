@@ -1,0 +1,111 @@
+/* Body Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin-top: 30px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #28a745;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Modal Styles */
+  .modal-header {
+    background-color: #f8f9fa;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  #savingsForm label {
+    font-weight: bold;
+  }
+  
+  #savingsForm input[type="text"],
+  #savingsForm input[type="number"],
+  #savingsForm input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #savingsForm button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Table Styles */
+  #tableSavings {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  #tableSavings th,
+  #tableSavings td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #tableSavings th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    opacity: 0.8;
+  }
+  

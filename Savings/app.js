@@ -1,85 +1,35 @@
+const form = document.getElementById('savingsForm');
 
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
+  const category = document.getElementById('category').value;
+  const goal = parseFloat(document.getElementById('goal').value);
+  const currAmt = parseFloat(document.getElementById('currAmt').value);
+  const target = document.getElementById('target').value;
+  const processedDate = document.getElementById('processedDate').value;
+  const userId = parseInt(document.getElementById('userId').value);
 
-function setupTable() {
-    const table = document.getElementById('tableInvestment')
-
-
-    apiFetchAllInvoices(table)
-}
-
-setupTable()
-let j = 1;
-function propulateActualData(table, invoices) {
-    // Sort invoices by date in descending order
-    invoices.sort((a, b) => new Date(b.invDt) - new Date(a.invDt));
-
-
-    for (const invoice of invoices) {
-        const { id, financeType, tag, invDt, amt } = invoice;
-
-        // Check if the checkbox is checked
-        if (financeType !== 'INVESTMENT') {
-            continue; // Skip the row if it's not an investment and the checkbox is checked
-        }
-
-        const row = table.insertRow();
-        row.insertCell(0).innerHTML = j++;
-        row.insertCell(1).innerHTML = financeType;
-        row.insertCell(2).innerHTML = tag;
-        row.insertCell(3).innerHTML = invDt;
-        row.insertCell(4).innerHTML = amt;
-
-        if (financeType === 'INCOME') {
-            row.classList.add('income-row');
-        } else if (financeType === 'EXPENSES') {
-            row.classList.add('expense-row');
-        }
+  const data = {
+    category: category,
+    goal: goal,
+    currAmt: currAmt,
+    target: target,
+    processedDate: processedDate,
+    userDto: {
+      id: '1'
     }
-}
+  };
 
-
-function apiFetchAllInvoices(table) {
-    axios.get('http://localhost:8080/finance/user-finances')
-        .then(res => {
-            const { data } = res
-            console.log(data)
-            const { sts, msg, bd } = data
-
-            propulateActualData(table, bd)
-        })
-        .catch(err => console.log(err))
-}
-
-
-
-
-
-function showConfirmDeleteModal(id) {
-    console.log('clicked ' + id)
-    const myModalEl = document.getElementById('deleteModal');
-    const modal = new bootstrap.Modal(myModalEl)
-    modal.show()
-
-    const btDl = document.getElementById('btDl')
-    btDl.onclick = () => {
-        apiCallDeleteInvoice(id, modal)
-    }
-}
-
-
-function apiCallDeleteInvoice(id, modal) {
-    const url = `http://localhost:8080/finance/delete/${id}`
-    location.reload();
-
-    axios.delete(url)
-        .then(res => res.data) // you converted complete response in to our business reponse
-        // .then( data => console.log(data.msg) ) // this line can be written in destructured form as below
-
-        .then(({ sts, msg, bd }) => modal.hide())
-        .catch(console.log)
-
-}
+  axios.post('http://localhost:8080/savings/', data)
+    .then(response => {
+      console.log('Savings data posted successfully:', response.data);
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error posting savings data:', error);
+    });
+});
 
 function setupSavingsTable() {
     const table = document.getElementById('tableSavings')

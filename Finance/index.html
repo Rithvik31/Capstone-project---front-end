@@ -2,79 +2,121 @@
 <html lang="en">
 
 <head>
-	<title>MONEFY</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>MONEFY</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-			<a class="navbar-brand" href="./admin-dash.html">MONEFY</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link" aria-current="page"
-							href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\monefydashboard/index.html">Dashboard</a>
-					</li>
-					<li class="nav-item ms-10">
-						<a class="nav-link active" href="../Finance/index.html" id="events">Income and expenses</a>
-					</li>
-					<li class="nav-item ms-10">
-						<a class="nav-link"
-							href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\delete/delete.html"
-							id="events">View Expenses</a>
-					</li>
-					<li class="nav-item ms-10">
-						<a class="nav-link" href="../AboutUs/index.html">About Us</a>
-					</li>
-					<li class="nav-item ms-10">
-						<a class="nav-link" href="../Login/index.html">Logout</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container">
-		<h2>Income and expenses</h2>
-		<form id="finance-form">
-			<label for="financeType">Finance Type:</label>
-			<select id="financeType" name="financeType" required>
-				<option value="">Select</option>
-				<option value="INCOME">Income</option>
-				<option value="EXPENSES">Expenses</option>
-				<option value="INVESTMENT">Investment</option>
-			</select><br><br>
-			<label for="tag">Tag:</label>
-			<select id="tag" name="tag" required>
-				<option value="">Select Category</option>
-				<!-- Categories for Income -->
-				<option value="Salary" class="income-option">Salary</option>
-				<option value="Profits" class="income-option">Profits</option>
-				<option value="Bonus" class="income-option">Bonus</option>
-				<!-- Categories for Expenses -->
-				<option value="Groceries" class="expenses-option">Groceries</option>
-				<option value="Food" class="expenses-option">Food</option>
-				<option value="Fuel" class="expenses-option">Fuel</option>
-				<option value="Entertainment" class="expenses-option">Entertainment</option>
-				<option value="Investments" class="expenses-option">Investments</option>
-			</select><br><br>
-			<label for="invDt">Investment Date:</label>
-			<input type="date" id="invDt" name="invDt" required><br><br>
-			<label for="amt">Amount:</label>
-			<input type="number" id="amt" name="amt" min="0" required>
-			<button type="submit" class="btn-primary" id="submit-btn">Add Finance Info</button>
-		</form>
-		<div id="result"></div>
-	</div>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="script.js"></script>
-	</nav>
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <a class="navbar-brand" href="./admin-dash.html">MONEFY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page"
+            href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\monefydashboard/index.html">Dashboard</a>
+        </li>
+        <li class="nav-item ms-10">
+          <a class="nav-link active" href="../Finance/index.html" id="events">Income and expenses</a>
+        </li>
+        <li class="nav-item ms-10">
+          <a class="nav-link"
+            href="file:///C:/Users/Rithvik/OneDrive/Desktop/Capstone-project---front-end/Savings/index.html">Savings</a>
+        </li>
+        <li class="nav-item ms-10">
+          <a class="nav-link"
+            href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\delete/delete.html"
+            id="events">View Expenses</a>
+        </li>
+        <li class="nav-item ms-10">
+          <a class="nav-link" href="../AboutUs/index.html">About Us</a>
+        </li>
+        <li class="nav-item ms-10">
+          <a class="nav-link" href="../Login/index.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-primary me-md-2" type="button">Finances</button>
+    <a href="C:\Users\Rithvik\OneDrive\Desktop\Capstone-project---front-end\Finance/index.html" role="button"></a>
+  </div>
+
+  <div class="container">
+    <h2>Income and expenses</h2>
+    <form id="finance-form">
+      <div class="form-group">
+        <label for="financeType">Finance Type:</label>
+        <select id="financeType" name="financeType" class="form-control" required>
+          <option value="">Select</option>
+          <option value="INCOME">Income</option>
+          <option value="EXPENSES">Expenses</option>
+          <option value="INVESTMENT">Investment</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tag">Tag:</label>
+        <select id="tag" name="tag" class="form-control" required>
+          <option value="">Select Category</option>
+          <!-- Categories for Income -->
+          <option value="Salary" class="income-option">Salary</option>
+          <option value="Profits" class="income-option">Profits</option>
+          <option value="Bonus" class="income-option">Bonus</option>
+          <!-- Categories for Expenses -->
+          <option value="Groceries" class="expenses-option">Groceries</option>
+          <option value="Food" class="expenses-option">Food</option>
+          <option value="Fuel" class="expenses-option">Fuel</option>
+          <option value="Entertainment" class="expenses-option">Entertainment</option>
+          <option value="Investments" class="expenses-option">Investments</option>
+          <!-- Additional category for Investment -->
+          <option value="Other" class="investment-option">Other (Please Specify)</option>
+        </select>
+      </div>
+      <div class="form-group additional-category" style="display: none;">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="invDt">Investment Date:</label>
+        <input type="date" id="invDt" name="invDt" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="amt">Amount:</label>
+        <input type="number" id="amt" name="amt" min="0" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit-btn">Add Finance Info</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('financeType').addEventListener('change', function() {
+      var selectedValue = this.value;
+      var additionalCategory = document.querySelector('.additional-category');
+      if (selectedValue === 'INVESTMENT') {
+        additionalCategory.style.display = 'block';
+        document.getElementById('category').required = true;
+      } else {
+        additionalCategory.style.display = 'none';
+        document.getElementById('category').required = false;
+      }
+    });
+  </script>
 </body>
 
 </html>

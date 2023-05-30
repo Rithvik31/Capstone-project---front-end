@@ -1,75 +1,55 @@
-/* Body Styles */
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.container {
+	max-width: 500px;
+	margin: 0 auto;
 	padding: 20px;
-  }
-  
-  .container {
-	margin-top: 20px;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-	background-color: #28a745;
-  }
-  
-  .navbar-brand {
-	font-size: 24px;
-	font-weight: bold;
-  }
-  
-  .nav-link {
-	color: #fff !important;
-  }
-  
-  /* Form Styles */
-  h2 {
-	font-size: 28px;
-	font-weight: bold;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	text-align: center;
 	margin-bottom: 20px;
-  }
-  
-  form {
+}
+
+.form-group {
 	margin-bottom: 20px;
-  }
-  
-  form label {
+}
+
+label {
 	font-weight: bold;
-  }
-  
-  form select,
-  form input[type="date"],
-  form input[type="number"] {
-	margin-bottom: 10px;
-	padding: 8px;
+}
+
+select,
+input[type="date"],
+input[type="number"] {
 	width: 100%;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 16px;
-  }
-  
-  form button[type="submit"] {
-	padding: 10px 20px;
-	background-color: #007bff;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-  }
-  
-  /* Result Styles */
-  #result {
 	padding: 10px;
 	border: 1px solid #ccc;
-	background-color: #fff;
-	margin-top: 20px;
-  }
-  
-  /* Footer Styles */
-  footer {
-	margin-top: 20px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+button[type="submit"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
 	text-align: center;
-	color: #777;
-  }
-  
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #0056b3;
+}

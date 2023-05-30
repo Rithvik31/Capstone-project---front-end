@@ -67,3 +67,34 @@ axios.all([
 })).catch(error => {
   console.log('Error fetching data:', error);
 });
+
+document.getElementById('submit-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  
+  var financeType = document.getElementById('financeType').value;
+  var tag = document.getElementById('tag').value;
+  var category = document.getElementById('category').value;
+  var investmentDate = document.getElementById('invDt').value;
+  var amount = document.getElementById('amt').value;
+
+  // Create a new row in the table
+  var table = document.getElementById('finance-table');
+  var newRow = table.insertRow();
+  
+  // Insert cells into the new row
+  var cell1 = newRow.insertCell();
+  var cell2 = newRow.insertCell();
+  var cell3 = newRow.insertCell();
+  var cell4 = newRow.insertCell();
+  var cell5 = newRow.insertCell();
+
+  // Set the cell values
+  cell1.innerHTML = financeType;
+  cell2.innerHTML = tag;
+  cell3.innerHTML = category;
+  cell4.innerHTML = investmentDate;
+  cell5.innerHTML = amount;
+
+  // Clear the form fields
+  document.getElementById('finance-form').reset();
+});
