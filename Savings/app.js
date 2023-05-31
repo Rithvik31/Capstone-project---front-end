@@ -52,8 +52,7 @@ function populateSavingsData(table, savings) {
     row.insertCell(2).innerHTML = goal;
     row.insertCell(3).innerHTML = currAmt;
     row.insertCell(4).innerHTML = target;
-    row.insertCell(5).innerHTML = `<a class='ms-2 btn-danger btn' onclick='showConfirmDeleteModal(${id})'>Delete</a>
-      <a class="ms-2 btn-info btn" onclick="showUpdateModal(${id}, '${category}', ${goal}, ${currAmt}, '${target}')">Update</a>
+    row.insertCell(5).innerHTML = `<a class="ms-2 btn-info btn" onclick="showUpdateModal(${id}, '${category}', ${goal}, ${currAmt}, '${target}')">Update</a>
       `;
   }
 }
@@ -84,7 +83,6 @@ function showConfirmDeleteModal(id) {
 
 function apiCallDeleteSavings(id, modal) {
   const url = `http://localhost:8080/savings/${id}`;
-  location.reload();
 
   axios.delete(url)
     .then(res => res.data)
