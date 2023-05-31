@@ -14,20 +14,38 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Navbar Styles */
-  .navbar {
-    background-color: #28a745;
-  }
-  
-  .navbar-brand {
-    font-size: 20px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ccc;
+    }
+    
+    .navbar-brand {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-image: url("D:/Capstone Project/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+    
+    .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    }
+    
+    .nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #db8787;
     font-weight: bold;
-  }
-  
-  .nav-link {
-    color: #fff;
-    font-size: 16px;
-  }
+    }
+    
+    .nav-link:hover {
+    text-decoration: underline;
+    }
   
   /* Modal Styles */
   .modal-header {

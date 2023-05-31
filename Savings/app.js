@@ -138,3 +138,21 @@ function showUpdateModal(id, category, goal, currAmt, target) {
       });
   }
   
+  function showConfirmDeleteModal() {
+    const modal = document.getElementById('confirmDeleteModal');
+    if (!modal) {
+      return;
+    }
+  
+    const modalDialog = modal.querySelector('.modal-dialog');
+    if (!modalDialog) {
+      return;
+    }
+  
+    modalDialog.classList.add('modal-dialog-scrollable');
+    modalDialog.scrollTop = 0;
+  
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
+  }
+  
