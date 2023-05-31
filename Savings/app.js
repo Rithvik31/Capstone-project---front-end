@@ -70,6 +70,18 @@ function apiFetchAllSavings(table) {
     .catch(err => console.log(err));
 }
 
+function showConfirmDeleteModal(id) {
+  console.log('clicked ' + id);
+  const myModalEl = document.getElementById('deleteModal');
+  const modal = new bootstrap.Modal(myModalEl);
+  modal.show();
+
+  const btDl = document.getElementById('btDl');
+  btDl.onclick = () => {
+    apiCallDeleteSavings(id, modal);
+  };
+}
+
 function apiCallDeleteSavings(id, modal) {
   const url = `http://localhost:8080/savings/${id}`;
   location.reload();
@@ -124,23 +136,5 @@ function showUpdateModal(id, category, goal, currAmt, target) {
       .catch(error => {
         console.error('Error updating savings data:', error);
       });
-  }
-  
-  function showConfirmDeleteModal() {
-    const modal = document.getElementById('confirmDeleteModal');
-    if (!modal) {
-      return;
-    }
-  
-    const modalDialog = modal.querySelector('.modal-dialog');
-    if (!modalDialog) {
-      return;
-    }
-  
-    modalDialog.classList.add('modal-dialog-scrollable');
-    modalDialog.scrollTop = 0;
-  
-    const bootstrapModal = new bootstrap.Modal(modal);
-    bootstrapModal.show();
   }
   

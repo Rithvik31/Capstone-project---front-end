@@ -8,11 +8,11 @@ function setupTable() {
 setupTable()
 
 
-let i=1;
+let i = 1;
 
 function propulateActualData(table, invoices) {
 
-    for(const invoice of invoices) {
+    for (const invoice of invoices) {
 
         const { id, financeType, tag, invDt, amt } = invoice
         const updatePageUrl = `./update-invoice.html?id=${id}`
@@ -45,7 +45,7 @@ function apiFetchAllInvoices(table) {
     axios.get('http://localhost:8080/finance/user-finances')
         .then(res => {
             const { data } = res
-            console.log(data)  
+            console.log(data)
             const { sts, msg, bd } = data
 
             propulateActualData(table, bd)
@@ -73,6 +73,6 @@ function apiCallDeleteInvoice(id, modal) {
     axios.delete(url)
         .then(res => res.data) // you converted complete response in to our business reponse
         // .then( data => console.log(data.msg) ) // this line can be written in destructured form as below
-        .then( ({ sts, msg, bd }) =>  modal.hide() )
+        .then(({ sts, msg, bd }) => modal.hide())
         .catch(console.log)
 }
