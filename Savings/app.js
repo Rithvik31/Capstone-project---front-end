@@ -70,18 +70,6 @@ function apiFetchAllSavings(table) {
     .catch(err => console.log(err));
 }
 
-function showConfirmDeleteModal(id) {
-  console.log('clicked ' + id);
-  const myModalEl = document.getElementById('deleteModal');
-  const modal = new bootstrap.Modal(myModalEl);
-  modal.show();
-
-  const btDl = document.getElementById('btDl');
-  btDl.onclick = () => {
-    apiCallDeleteSavings(id, modal);
-  };
-}
-
 function apiCallDeleteSavings(id, modal) {
   const url = `http://localhost:8080/savings/${id}`;
   location.reload();
